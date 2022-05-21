@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omar Mustafa</title>
+  <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        /* padding: 0; */
+    }
+    
+    .main{
+        /* max-width: 90%; */
+        background-image: linear-gradient(to top, #707070 0%, #808080 15%, #9e9e9e 50%, #b1b1b1 75%, #dfdfdf 90%, #fff 100%);
+    }
+
+    .main__container{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 0;
+    height: 100vh;
+    width: 100%;
+    padding: 0 5%;
+    }
+
+    /* .main__img--container{
+    text-align: center;
+    float: left;
+    margin: auto 30px;
+    top: 0px;
+    left: 1000px;
+    } */
+
+    #main__img{
+    height: 200px;
+    width: 200px;
+    float: right;
+    right: auto;
+    }
+
+    .main__content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    padding: 0 5%;
+    width: 70%;
+    /* max-width: 70%; */
+    font-size: 15px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    }
+
+    .main__collapsible{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collapsible {
+      background-color: rgb(0, 60, 226);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      padding: 18px;
+      width: 80%;
+      border: none;
+      /* text-align: center; */
+      outline: none;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 5%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+      width: 80%;
+      max-width: 80%;
+      text-align: justify;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Main Section -->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Hello, my name is Omar Mustafa!</h1><br>
+            <p>I am currently a first-year student at Nanyang Technological University (NTU), Singapore, studying Chemical and Biomolecular Engineering.</p>
+            <br>
+            <p>However, I hope to make a change in my programme and pursue a career in the field of Computer Engineering.
+               I sincerely hope I get to transfer programme, because becoming a software developer is my dream!</p>
+               <br>
+            <p>(I crafted this website specifically for my application for a change of programme, using HTML, CSS and JavaScript. I had previously made 2 other versions of a personal website using the same 3 languages,
+               but I decided on using this version because it's the most straightforward and has the least lines of code.)</p>
+        </div>
+          <div class="main__img--container">
+            <img src="/omar1.svg" alt="pic" id="main__img">
+          </div>
+    </div>
+
+    <!-- Collapsible Section -->
+          <div class="main__collapsible">
+            <button class="collapsible">About Me</button>
+              <div class="content">
+                <br>
+                <p>I have always loved tinkering with computers and experimenting with software.
+                  When I was a teenager, I played computer games in my free time. I researched and studied the vast variety of computer parts and learnt the best specifications
+                    a computer should have in order to run demanding programmes at optimal settings. I build my very own PCs from scratch,
+                    by choosing the right computer parts and assembling them together.</p>
+                    <br>
+                <p>Back in National Service, I served as an administrative clerk and had multiple job scopes, one being assisting the Data Analytics branch with their work. This
+                   was when I was first introduced to the world of programming, and I observed just how much it simplifies things and how much it is used in workplaces.
+                </p>
+                <br>
+              </div>
+            
+              <button class="collapsible">Experience</button>
+                <div class="content">
+                  <br>
+                  <p>Back in my National Service with Singapore Civil Defence Force (SCDF), I partially worked with Data Analysts whose job scope was 
+                    monthly cleaning and reporting of Emergency Medical Services (EMS) data, and maintaining and creating scripts for data cleaning. In layman terms, they collated data 
+                    from ambulance statistics and made reports. I cannot go into much detail as to what we did because the information is mostly classified.
+                  </p>
+                  <br>
+                </div>
+              
+              <button class="collapsible">Skills</button>
+                <div class="content">
+                  <br>
+                  <p>&#x2022; HTML, CSS and JavaScript, although admittedly, I prefer not to use JavaScript.</p>
+                  <p>&#x2022; MATLAB</p>
+                  <p>&#x2022; I know basic Python, having completed some beginner-level projects.</p>
+                  <p>&#x2022; I am currently also teaching myself C++ because I have a project in mind which involves the use of said language.</p>
+                  <br></br>
+                  <p><u>Integrated Development Environments (IDEs) used:</u></p>
+                  <p>&#x2022; Visual Studio Code for HTML, CSS, JavaScript</p>
+                  <p>(Initially used Atom for HTML)</p>
+                  <p>&#x2022; PyCharm for Python</p>
+                  <br>
+                </div>
+              
+              <button class="collapsible">Projects (with code)</button>
+                <div class="content">
+                  <br>
+                  <p>&#x2022; This Website.</p>
+                  <br>
+                </div>
+              
+              <button class="collapsible">Non-IT Skills</button>
+                <div class="content">
+                  <br>
+                    <p><b>Languages</b></p>
+                  <br>
+                </div>
+          </div>
+    
+          <!-- Footer Section -->
+    <div class="footer__container">
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
